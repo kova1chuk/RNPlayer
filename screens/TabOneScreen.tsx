@@ -4,6 +4,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
