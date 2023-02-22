@@ -2,6 +2,9 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
+import PlayIcon from '@app/assets/images/svg/playIcon.svg';
+import PauseIcon from '@app/assets/images/svg/pauseIcon.svg';
+
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
   const seconds = Math.floor(time % 60);
@@ -39,7 +42,12 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
           <Text style={styles.control}>Skip Backward</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={onPlayPausePress}>
-          <Text style={styles.control}>{isPlaying ? 'Pause' : 'Play'}</Text>
+          {isPlaying ? (
+            <PauseIcon width={24} height={24} />
+          ) : (
+            <PlayIcon width={24} height={24} />
+          )
+          }
         </TouchableOpacity>
         <TouchableOpacity onPress={onSkipForwardPress}>
           <Text style={styles.control}>Skip Forward</Text>
