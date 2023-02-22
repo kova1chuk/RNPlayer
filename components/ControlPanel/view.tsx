@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
 import PlayIcon from '@app/assets/images/svg/playIcon.svg';
-import PauseIcon from '@app/assets/images/svg/playIcon.svg';
+import PauseIcon from '@app/assets/images/svg/pauseIcon.svg';
 
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
