@@ -1,5 +1,4 @@
 import { SVGProps } from '@app/types';
-import * as React from 'react';
 import Svg, { Path } from 'react-native-svg';
 
 const PlayIcon = (props: SVGProps) => (
