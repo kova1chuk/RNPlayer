@@ -20,6 +20,11 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+    backgroundColor: '#fff',
+  },
+  artwork: {
+    width: 28,
+    height: 28,
   },
   trackInfo: {
     flex: 1,

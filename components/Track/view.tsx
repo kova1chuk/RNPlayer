@@ -1,5 +1,5 @@
 import { TrackEntity } from '@app/types/track';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 import PlayIcon from '@app/assets/images/svg/playIcon.svg';
 import styles from './styles';
@@ -14,6 +14,12 @@ const TrackView = ({ trackData, handlePlayTrack, handleRemoveTrack }: TrackViewP
   return (
     <View style={styles.trackContainer}>
       <TouchableOpacity onPress={() => handlePlayTrack(trackData.id)}>
+        <Image
+          source={{
+            uri: 'https://rare-gallery.com/thumbs/550520-nirvana-album.jpg',
+          }}
+          style={styles.artwork}
+        />
         <PlayIcon width={24} height={24} />
       </TouchableOpacity>
       <View style={styles.trackInfo}>
