@@ -42,11 +42,10 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
           <Text style={styles.control}>Skip Backward</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={onPlayPausePress}>
-          {/*<Text style={styles.control}>{isPlaying ? 'Pause' : 'Play'}</Text>*/} 
           {isPlaying ? (
-            <Text style={styles.control}><PauseIcon width={24} height={24} /></Text>
+            <PauseIcon width={24} height={24} />
           ) : (
-            <Text style={styles.control}><PlayIcon width={24} height={24} /></Text>
+            <PlayIcon width={24} height={24} />
           )
           }
         </TouchableOpacity>
