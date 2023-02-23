@@ -43,18 +43,13 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
     <View style={styles.container}>
       <View style={styles.controlsContainer}>
         <TouchableOpacity onPress={onSkipBackwardPress}>
-        <SkipBackwardIcon width={24} height={24}/>
+          <SkipBackwardIcon width={24} height={24} />
         </TouchableOpacity>
         <TouchableOpacity onPress={onPlayPausePress}>
-          {isPlaying ? (
-            <PauseIcon width={24} height={24} />
-          ) : (
-            <PlayIcon width={24} height={24} />
-          )
-          }
+          {isPlaying ? <PauseIcon width={24} height={24} /> : <PlayIcon width={24} height={24} />}
         </TouchableOpacity>
         <TouchableOpacity onPress={onSkipForwardPress}>
-          <SkipForwardIcon width={24} height={24}/>
+          <SkipForwardIcon width={24} height={24} />
         </TouchableOpacity>
       </View>
       <View style={styles.progressContainer}>
@@ -66,7 +61,7 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
       </View>
       <View style={styles.bottomControlsContainer}>
         <TouchableOpacity onPress={onShufflePress}>
-          <ShuffleIcon width={24} height={24} /> 
+          <ShuffleIcon width={24} height={24} />
         </TouchableOpacity>
         <TouchableOpacity onPress={onRepeatPress}>
           <RepeatIcon height={24} width={24} />
