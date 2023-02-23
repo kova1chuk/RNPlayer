@@ -4,6 +4,8 @@ import styles from './styles';
 
 import PlayIcon from '@app/assets/images/svg/playIcon.svg';
 import PauseIcon from '@app/assets/images/svg/pauseIcon.svg';
+import SkipBackwardIcon from '@app/assets/images/svg/skipBackwardIcon.svg';
+import SkipForwardIcon from '@app/assets/images/svg/skipForwardIcon.svg';
 
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
@@ -39,7 +41,7 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
     <View style={styles.container}>
       <View style={styles.controlsContainer}>
         <TouchableOpacity onPress={onSkipBackwardPress}>
-          <Text style={styles.control}>Skip Backward</Text>
+        <SkipBackwardIcon width={24} height={24}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={onPlayPausePress}>
           {isPlaying ? (
@@ -50,7 +52,7 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
           }
         </TouchableOpacity>
         <TouchableOpacity onPress={onSkipForwardPress}>
-          <Text style={styles.control}>Skip Forward</Text>
+          <SkipForwardIcon width={24} height={24}/>
         </TouchableOpacity>
       </View>
       <View style={styles.progressContainer}>

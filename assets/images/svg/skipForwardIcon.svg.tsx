@@ -1,0 +1,16 @@
+import { SVGProps } from '@app/types';
+import Svg, { Path } from 'react-native-svg'
+
+const SkipForwardIcon = (props: SVGProps) => (
+  <Svg viewBox="0 0 24 24" fill="none" {...props}>
+    <Path
+      d="M19 5v14M7.6 17.92l5.838-4.67c.534-.428.801-.641.898-.9a1 1 0 0 0 0-.7c-.097-.259-.364-.472-.898-.9L7.6 6.08C6.767 5.414 6.35 5.08 6 5.08a1 1 0 0 0-.783.377C5 5.73 5 6.263 5 7.329v9.342c0 1.066 0 1.599.218 1.872a1 1 0 0 0 .783.376c.35 0 .766-.333 1.599-.999Z"
+      stroke="#000"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+)
+
+export default SkipForwardIcon
