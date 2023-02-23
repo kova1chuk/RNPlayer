@@ -7,7 +7,7 @@ const ControlPanelStyles = StyleSheet.create({
   },
   controlsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     marginBottom: 10,
   },
   control: {
