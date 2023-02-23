@@ -6,6 +6,8 @@ import PlayIcon from '@app/assets/images/svg/playIcon.svg';
 import PauseIcon from '@app/assets/images/svg/pauseIcon.svg';
 import SkipBackwardIcon from '@app/assets/images/svg/skipBackwardIcon.svg';
 import SkipForwardIcon from '@app/assets/images/svg/skipForwardIcon.svg';
+import ShuffleIcon from '@app/assets/images/svg/shuffleIcon.svg';
+import RepeatIcon from '@app/assets/images/svg/repeatIcon.svg';
 
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);
@@ -64,10 +66,10 @@ const ControlPanelView: React.FC<ControlPanelViewProps> = ({
       </View>
       <View style={styles.bottomControlsContainer}>
         <TouchableOpacity onPress={onShufflePress}>
-          <Text style={styles.bottomControl}>Shuffle</Text>
+          <ShuffleIcon width={24} height={24} /> 
         </TouchableOpacity>
         <TouchableOpacity onPress={onRepeatPress}>
-          <Text style={styles.bottomControl}>Repeat</Text>
+          <RepeatIcon height={24} width={24} />
         </TouchableOpacity>
       </View>
     </View>
