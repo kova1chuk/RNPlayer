@@ -1,3 +1,4 @@
+import Layout from '@app/constants/Layout';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -22,13 +23,29 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc',
     backgroundColor: '#fff',
   },
-  artwork: {
-    width: 28,
-    height: 28,
+  trackArtwork: {
+    width: 32,
+    height: 32,
+    borderRadius: 1,
+  },
+  trackArtworkBackgroundImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    ...Layout.artworkZIndex,
+  },
+  trackArtworkcontrol: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...Layout.artworkControlZIndex,
   },
   trackInfo: {
     flex: 1,
     marginRight: 16,
+    marginLeft: 16,
   },
   trackTitle: {
     fontSize: 18,

@@ -9,4 +9,10 @@ export default {
     height,
   },
   isSmallDevice: width < 375,
+  artworkZIndex: {
+    zIndex: 50,
+  },
+  artworkControlZIndex: {
+    zIndex: 100,
+  },
 };

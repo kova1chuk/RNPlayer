@@ -1,5 +1,6 @@
 import { TrackEntity } from '@app/types/track';
 import TrackView from './view';
+import React, { useState } from 'react';
 
 type TrackProps = {
   data: TrackEntity;
@@ -8,10 +9,14 @@ type TrackProps = {
 };
 
 const Track = ({ data, handlePlayTrack, handleRemoveTrack }: TrackProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <TrackView
       trackData={data}
-      handlePlayTrack={handlePlayTrack}
+      isPlaying={isPlaying}
+      handlePlayTrack={() => {
+        setIsPlaying(!isPlaying);
+      }}
       handleRemoveTrack={handleRemoveTrack}
     />
   );
