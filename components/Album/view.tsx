@@ -1,5 +1,5 @@
 import { AlbumEntity } from '@app/types/album';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 import PlayIcon from '@app/assets/images/svg/playIcon.svg';
 import styles from './styles';
@@ -14,6 +14,12 @@ const AlbumView = ({ albumData, handlePlayAlbum, handleRemoveAlbum }: AlbumViewP
   return (
     <View style={styles.container}>
       <View style={styles.albumInfo}>
+        <Image
+          source={{
+            uri: 'https://rare-gallery.com/thumbs/550520-nirvana-album.jpg',
+          }}
+          style={styles.trackImage}
+        />
         <Text style={styles.albumTitle}>{albumData.title}</Text>
         <Text style={styles.albumArtist}>{albumData.artist}</Text>
         <Text style={styles.albumReleaseYear}>{albumData.releaseYear}</Text>
