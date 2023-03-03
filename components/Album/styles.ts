@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     justifyContent: 'center',
     margin: 10, // Add margin here to apply to the container of each album
-    padding: 8,
     borderRadius: 5,
     shadowColor: '#000',
     shadowOffset: {
@@ -18,9 +17,11 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  albumInfo: {
+  artwork: {
     flex: 1,
-    marginRight: 10,
+    //position: 'absolute',
+    top: 0,
+    left: 0,
   },
   albumTitle: {
     fontWeight: 'bold',
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
   },
-  buttonsContainer: {
+  artworkControls: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -59,11 +60,12 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   trackImage: {
+    position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
-    height: '20%',
-    marginBottom: 5,
+    height: '100%',
+    //marginBottom: 5,
   },
 });
 
