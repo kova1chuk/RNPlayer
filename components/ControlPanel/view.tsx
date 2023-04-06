@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-import PlayIcon from '@app/assets/images/svg/playIcon.svg';
-import PauseIcon from '@app/assets/images/svg/pauseIcon.svg';
-import SkipBackwardIcon from '@app/assets/images/svg/skipBackwardIcon.svg';
-import SkipForwardIcon from '@app/assets/images/svg/skipForwardIcon.svg';
-import ShuffleIcon from '@app/assets/images/svg/shuffleIcon.svg';
-import RepeatIcon from '@app/assets/images/svg/repeatIcon.svg';
+import PlayIcon from '@app/assets/images/svg/playIconSVG';
+import PauseIcon from '@app/assets/images/svg/pauseIconSVG';
+import SkipBackwardIcon from '@app/assets/images/svg/skipBackwardIconSVG';
+import SkipForwardIcon from '@app/assets/images/svg/skipForwardIconSVG';
+import ShuffleIcon from '@app/assets/images/svg/shuffleIconSVG';
+import RepeatIcon from '@app/assets/images/svg/repeatIconSVG';
 
 const formatTime = (time: number): string => {
   const minutes = Math.floor(time / 60);

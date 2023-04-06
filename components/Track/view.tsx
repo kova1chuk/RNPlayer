@@ -1,7 +1,7 @@
 import { TrackEntity } from '@app/types/track';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 
-import PlayIcon from '@app/assets/images/svg/playIcon.svg';
+import PlayIcon from '@app/assets/images/svg/playIconSVG';
 import styles from './styles';
 
 type TrackViewProps = {
