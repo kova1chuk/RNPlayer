@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   albumInfo: {
-    // flex: 1,
+    flex: 1,
     marginRight: 10,
   },
   albumTitle: {
@@ -57,6 +57,13 @@ const styles = StyleSheet.create({
   },
   removeButtonText: {
     color: '#fff',
+  },
+  trackImage: {
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '20%',
+    marginBottom: 5,
   },
 });
 

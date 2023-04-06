@@ -37,4 +37,6 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> = Composit
 export type SVGProps = {
   width: number;
   height: number;
+  position?: string;
+  zIndex?: number;
 };
