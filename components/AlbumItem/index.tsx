@@ -10,9 +10,9 @@ type AlbumProps = {
 const Album = ({ data, handlePlayAlbum, handleRemoveAlbum }: AlbumProps) => {
   return (
     <AlbumView
-    // albumData={data}
-    // handlePlayAlbum={handlePlayAlbum}
-    // handleRemoveAlbum={handleRemoveAlbum}
+      albumData={data}
+      handlePlayAlbum={handlePlayAlbum}
+      handleRemoveAlbum={handleRemoveAlbum}
     />
   );
 };

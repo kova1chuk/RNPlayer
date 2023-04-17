@@ -1,7 +1,7 @@
 import { AlbumEntity } from '@app/types/album';
 import React from 'react';
 import { FlatList } from 'react-native';
-import Album from '../Album';
+import Album from '../AlbumItem';
 
 import styles from './styles';
 
