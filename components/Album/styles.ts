@@ -2,10 +2,11 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: '90%',
+    height: '90%',
     backgroundColor: '#fff',
     // alignItems: 'center',
-    justifyContent: 'center',
+    //justifyContent: 'space-around',
     margin: 10, // Add margin here to apply to the container of each album
     borderRadius: 5,
     shadowColor: '#000',
@@ -17,25 +18,21 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
+  artworkContainer: {
+    width: '75%',
+    height: 215,
+    padding: 10,
+    justifyContent: 'flex-end',
+  },
   artwork: {
-    flex: 1,
     //position: 'absolute',
+    // width: 50,
+    // height: 50,
+    position: 'absolute',
     top: 0,
     left: 0,
-  },
-  albumTitle: {
-    fontWeight: 'bold',
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  albumArtist: {
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 5,
-  },
-  albumReleaseYear: {
-    fontSize: 14,
-    color: '#666',
+    width: '100%',
+    height: '100%',
   },
   artworkControls: {
     width: '100%',
@@ -59,6 +56,25 @@ const styles = StyleSheet.create({
   removeButtonText: {
     color: '#fff',
   },
+  albumDataContainer: {
+    padding: 12,
+  },
+  albumTitle: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginBottom: 5,
+    zIndex: 200,
+  },
+  albumArtist: {
+    fontSize: 14,
+    color: '#666',
+    marginBottom: 5,
+  },
+  albumReleaseYear: {
+    fontSize: 14,
+    color: '#666',
+  },
+
   trackImage: {
     position: 'absolute',
     top: 0,

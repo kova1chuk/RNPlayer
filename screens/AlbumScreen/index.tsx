@@ -10,7 +10,7 @@ import styles from './styles';
 
 type AlbumScreenProps = PropsFromRedux;
 
-const AlbumScreen: React.FC<AlbumScreenProps> = ({ data, loading, error, removeAlbum }) => {
+const AlbumScreen: React.FC<AlbumScreenProps> = ({ albumName, tracks, loading, error }) => {
   const handlePlayAlbum = (albumId: string) => {
     // Logic for playing the selected album goes here
     // setSelectedAlbum(albumId);
@@ -20,7 +20,7 @@ const AlbumScreen: React.FC<AlbumScreenProps> = ({ data, loading, error, removeA
   const handleRemoveAlbum = (albumId: string) => {
     // Logic for removing the selected album goes here
     console.log(`Removing album: ${albumId}`);
-    removeAlbum([albumId]);
+    //removeAlbum([albumId]);
   };
 
   if (loading) {
@@ -43,19 +43,21 @@ const AlbumScreen: React.FC<AlbumScreenProps> = ({ data, loading, error, removeA
 
   return (
     <View style={styles.container}>
-      <Album />
+      <Album albumName={albumName} tracks={tracks} />
     </View>
   );
 };
 
-const mapStateToProps = (state: AppState) => ({
-  // const { data, loading, error } = state.albums;
-  // return {
-  //   data,
-  //   loading,
-  //   error,
-  // };
-});
+const mapStateToProps = (state: AppState) => {
+  const { data, loading, error } = state.albumView;
+
+  return {
+    albumName: data.albumName,
+    tracks: data.tracks,
+    loading,
+    error,
+  };
+};
 
 const mapDispatchToProps = (dispatch: AppDispatch) => ({
   // return {
