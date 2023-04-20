@@ -33,7 +33,6 @@ const AlbumView = ({ albumData, handlePlayAlbum, handleRemoveAlbum }: AlbumViewP
         </View>
       </View>
       <View>
-        {' '}
         {/*albumInfo*/}
         <Text style={styles.albumTitle}>{albumData.title}</Text>
         <Text style={styles.albumArtist}>{albumData.artist}</Text>
