@@ -1,7 +1,7 @@
 import { AlbumEntity } from '@app/types/album';
 import React from 'react';
 import { FlatList } from 'react-native';
-import Album from '../Album';
+import AlbumItem from '../AlbumItem';
 
 import styles from './styles';
 
@@ -14,7 +14,11 @@ type AlbumsProps = {
 const Albums: React.FC<AlbumsProps> = ({ albums, handlePlayAlbum, handleRemoveAlbum }) => {
   const renderItem = ({ item }: { item: AlbumEntity }) => {
     return (
-      <Album data={item} handlePlayAlbum={handlePlayAlbum} handleRemoveAlbum={handleRemoveAlbum} />
+      <AlbumItem
+        data={item}
+        handlePlayAlbum={handlePlayAlbum}
+        handleRemoveAlbum={handleRemoveAlbum}
+      />
     );
   };
 
