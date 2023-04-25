@@ -18,6 +18,7 @@ const Header = () => {
         backgroundColor: theme === 'light' ? 'white' : 'black',
         height: 60,
         paddingHorizontal: 16,
+        marginTop: 52,
       }}
     >
       <Text style={{ color: theme === 'light' ? 'black' : 'white' }}>RNPlayer</Text>
