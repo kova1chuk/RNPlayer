@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@app/*": ["./*"]
-    }
+    },
+    "typeRoots": ["node_modules/@types"]
   }
 }

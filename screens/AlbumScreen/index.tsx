@@ -8,6 +8,18 @@ import { connect, ConnectedProps } from 'react-redux';
 
 import styles from './styles';
 
+import firestore from '@react-native-firebase/firestore';
+
+function onResult(QuerySnapshot: any) {
+  console.log('Got Tracks collection result.', QuerySnapshot);
+}
+
+function onError(error: any) {
+  console.error(error);
+}
+
+firestore().collection('Tracks').onSnapshot(onResult, onError);
+
 type AlbumScreenProps = PropsFromRedux;
 
 const AlbumScreen: React.FC<AlbumScreenProps> = ({ albumName, tracks, loading, error }) => {
