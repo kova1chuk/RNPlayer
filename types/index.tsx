@@ -19,6 +19,12 @@ export type RootStackParamList = {
   NotFound: undefined;
 };
 
+export type LibraryStackParamList = {
+  Tracks: undefined;
+  Albums: undefined;
+  Album: undefined;
+};
+
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
   RootStackParamList,
   Screen

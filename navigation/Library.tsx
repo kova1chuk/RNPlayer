@@ -1,14 +1,24 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  NativeStackNavigationProp,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
 
 import ButtonTabs from '@app/components/ButtonTabs';
 import AlbumsScreen from '../screens/AlbumsScreen';
 import ControlPanel from '@app/components/ControlPanel';
 import TracksScreen from '@app/screens/TracksScreen';
 import AlbumScreen from '@app/screens/AlbumScreen';
+import { LibraryStackParamList } from '@app/types';
+
+type LibraryNavigationProp = NativeStackNavigationProp<LibraryStackParamList>;
+
+interface Props {
+  navigation: LibraryNavigationProp;
+}
 
 export const Stack = createNativeStackNavigator();
 
-function Library({ navigation }) {
+function Library({ navigation }: Props) {
   return (
     <>
       <Stack.Navigator>
@@ -24,8 +34,12 @@ function Library({ navigation }) {
           { label: 'Album', iconName: 'circle' },
         ]}
         activeTab={''} //TODO: get current route
-        onChangeTab={function (label: string): void {
-          navigation.navigate(label);
+        onChangeTab={(label: string) => {
+          try {
+            navigation.navigate(label as keyof LibraryStackParamList);
+          } catch (error: any) {
+            console.error('Invalid tab name:', error);
+          }
         }}
       />
     </>
