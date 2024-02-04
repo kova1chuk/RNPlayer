@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 
@@ -10,16 +11,23 @@ import store from './store';
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
+  // const colorScheme = useColorScheme();
+
   const colorScheme = useColorScheme();
+
+  const theme = colorScheme === 'dark' ? darkTheme : lightTheme;
 
   if (!isLoadingComplete) {
     return null;
   } else {
     return (
       <Provider store={store}>
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
-        </SafeAreaProvider>
+        {' '}
+        <ThemeProvider theme={theme}>
+          <SafeAreaProvider>
+            <Navigation />
+          </SafeAreaProvider>
+        </ThemeProvider>
       </Provider>
     );
   }
